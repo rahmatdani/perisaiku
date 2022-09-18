@@ -1,0 +1,243 @@
+/* font-family: 'Kanit', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
+
+p {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .nav-item a {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  /* warna */
+  .hitam {
+    color: #393939 !important;
+  }
+
+  .putih {
+    color: white !important;
+  }
+  /* ===== */
+
+  .judul1 {
+    font-size: 36px;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .judul2 {
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .text {
+    font-size: 19px;
+  }
+
+  .text-container{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .button{
+    width: 220px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+
+  /* jalur pendaftaran */
+
+  .text-jpen {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .jpen-p {
+    font-size: 20px;
+  }
+
+  .jpen, .jalurPendaftar {
+    font-size: 40px;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .media-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 30px;
+  }
+
+  .media-p {
+    font-size: 19px;
+    line-height: 160%;
+  }
+
+  .media-body{
+    font-size: 15px;
+    display: inline;
+  }
+
+  .fas {
+    color: red;
+  }
+
+  .gambar{
+    width: 400px;
+  }
+
+  .rata-tengah{
+    display: flex;
+    align-items: center;
+  }
+
+  /* jadwal */
+  .jadw {
+    margin-bottom: 50px;
+  }
+
+  .jadwl {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .kotak-jadwal {
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 300px;
+    text-align: center;
+    position: relative;
+  }
+
+  .jadwal-title{
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .jadwal-title p {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  .jadwal-bagian h4 {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .jadwal-bagian p{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #dc3545;
+  }
+
+  .tombol {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    bottom: 14;
+    left: 80px;
+  }
+
+  /* footer */
+
+  .tentang-kami h3 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+  }
+
+  .tentang-kami p {
+    font-weight: 300;
+    line-height: 190%;
+  }
+
+  .smk {
+    font-weight: 400;
+  }
+
+  .sosmed a img {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .copyright {
+    color: white;
+    padding: 15px;
+    text-align: center;
+    background-color: #A91523;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  @media (max-width:  767.98px) {
+    .jad {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    .gambar {
+      /* margin-left: 60px; */
+      display: block;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width:  767.98px) {
+    .nav-item a {
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #dc3545;
+    }
+
+    .text-container {
+      /* margin-top: 130px; */
+      text-align: left;
+    }
+
+    .jpen {
+      margin-top: 160px;
+    }
+
+    .jalurPendaftar {
+      margin-top: 50px;
+    }
+    .image-container{
+      width: 500px;
+    }
+
+    .judul1 {
+      font-size: 56px;
+    }
+
+    .judul2 {
+      font-size: 35px;
+    }
+
+    .text {
+      font-size: 20px;
+    }
+
+    .navbar-nav li:hover>a {
+      color: #dc3545 !important;
+    }
+
+    .navbar-nav .putih:hover>a {
+      color: white !important;
+    }
+  }
