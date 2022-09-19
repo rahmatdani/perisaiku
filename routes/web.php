@@ -29,4 +29,5 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/profil', [DashboardController::class, 'profil'])->middleware('auth');
 Route::post('/biodata', [DashboardController::class, 'store']);

@@ -2,13 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Biodata;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
+
 class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard.pendaftar');
+        return view('dashboard.pendaftar',[
+            "title" => "Home",
+            "active" => "home",
+            'biodata' => Biodata::latest()->first()
+        ]);
+    }
+
+    public function profil()
+    {
+        return view('dashboard.profil', [
+            'biodata' => Biodata::latest()->first()
+        ]);
     }
 
     public function store(Request $request)
@@ -23,9 +37,7 @@ class DashboardController extends Controller
             'jurusan1' => 'required',
             'jurusan2' => 'required',
             'alamat' => 'required',
-            'foto'     => 'mimes:png,jpg,jpeg',
-
-
+            'foto' => 'mimes:png,jpg,jpeg',
             'no_hp' => 'required',
             'provinsi' => 'required',
             'kabupaten' => 'required',
@@ -38,9 +50,7 @@ class DashboardController extends Controller
             'ipa1' => 'required',
             'b_ing' => 'required',
             'b_ing1' => 'required',
-
             // 'status' => 'required',
-
             'hp_ortu' => 'required',
             'agama' => 'required',
         ]);
@@ -49,7 +59,6 @@ class DashboardController extends Controller
 
         $foto = $request->file('foto');
         $foto->storeAs('public/blogs', $foto->hashName());
-
 
         Biodata::create([
             'name'  => $request->name,
@@ -76,7 +85,6 @@ class DashboardController extends Controller
             'b_ing1' => $request->b_ing1,
             'hp_ortu' => $request->hp_ortu,
             'agama' => $request->agama,
-
         ]);
 
 
