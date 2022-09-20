@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('halaman_utama');
 });
 
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'proses_login']);
 Route::post('/logout', [LoginController::class, 'proses_logout']);
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Biodata;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
@@ -20,8 +21,11 @@ class DashboardController extends Controller
 
     public function profil()
     {
+        $biodata = Biodata::where('user_id', Auth()->User()->id)->first();
         return view('dashboard.profil', [
-            'biodata' => Biodata::latest()->first()
+            // 'biodata' => Biodata::latest()->first(),
+            // 'biodata' => $users->biodata->load('users')
+            'biodata' => $biodata
         ]);
     }
 
@@ -62,6 +66,7 @@ class DashboardController extends Controller
 
         Biodata::create([
             'name'  => $request->name,
+            'user_id'  => Auth()->User()->id,
             'nisn' => $request->nisn,
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
@@ -90,7 +95,7 @@ class DashboardController extends Controller
 
         // Biodata::create($validatedData);
         $request->session()->flash('success', 'Data Berhasil disimpan dan akan segera divalidasi');
-        return redirect('/dashboard');
+        return redirect('/dashboard/profil');
 
 
     }

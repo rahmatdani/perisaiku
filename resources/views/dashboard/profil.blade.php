@@ -2,6 +2,12 @@
 
 @section('container')
 <div class="col-md-9 ms-sm-auto col-lg-10 px-md-5">
+    @if (session()->has('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
     <img src="/storage/blogs/{{ $biodata->foto; }}" alt="" width="300" class="mb-2 rounded-circle img-thumbnail d-block m-auto">
     <h1 class="text-center mb-5">{{ $biodata->name; }}</h1>
 

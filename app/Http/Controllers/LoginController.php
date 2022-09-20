@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+// use App\Http\Controllers\Biodata;
+use App\Models\Biodata;
 
 class LoginController extends Controller
 {
@@ -25,7 +27,12 @@ class LoginController extends Controller
         // dd($request);
         if(Auth::attempt($sukses)){
             $request->session()->regenerate();
-            return redirect()->intended('/dashboard');
+            $biodata = Biodata::where('user_id', Auth()->User()->id)->first();
+            if(empty($biodata->user_id)){
+                return redirect()->intended('/dashboard');
+            } else {
+                return redirect()->intended('/dashboard/profil');
+            }
         }
 
         return back()->with('LoginError','Login Gagal');

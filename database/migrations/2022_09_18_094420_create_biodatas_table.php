@@ -15,6 +15,7 @@ class CreateBiodatasTable extends Migration
     {
         Schema::create('biodatas', function (Blueprint $table) {
             $table->increments("id");
+            $table->bigInteger('user_id')->unsigned();
             $table->string("nisn");
             $table->string("name");
             $table->string("jenis_kelamin");
@@ -41,6 +42,7 @@ class CreateBiodatasTable extends Migration
             $table->string('hp_ortu');
             $table->string('agama');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
