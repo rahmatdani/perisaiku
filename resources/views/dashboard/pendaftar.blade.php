@@ -59,7 +59,7 @@
                             <select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
                                 <option>--</option>
                                 <option value="laki laki">Laki-laki</option>
-                                <option>Perempuan</option>
+                                <option value="Perempuan">Perempuan</option>
                             </select>
                         </div>
                         <div class="col-lg-6">
@@ -67,7 +67,11 @@
                             <select class="form-control" name="agama" id="agama">
                                 <option>--</option>
                                 <option value="islam">Islam</option>
-                                <option>Kristen</option>
+                                <option value="kristen">Katolik</option>
+                                <option value="protestan">Protestan</option>
+                                <option value="buddha">Buddha</option>
+                                <option value="konghucu">Konghucu</option>
+                                <option value="hindu">Hindu</option>
                             </select>
                         </div>
                     </div>
@@ -176,20 +180,32 @@
                         <h2>Jalur Pendaftaran</h2>
                         <select class="form-control" name="jalur" id="jalur">
                             <option>Jalur Pendaftaran</option>
-                            <option value="Sulawesi Selatan">Sulawei Selatan</option>
+                            <option value="jalur prestasi">Jalur Prestasi</option>
+                            <option value="jalur reguler">Jalur Reguler</option>
+                            <option value="jalur prestasi khusus">Jalur Prestasi Khusus</option>
                         </select>
                     </div>
                     <div class="row mb-3">
                         <div class="col-lg-6">
                             <select class="form-control" name="jurusan1" id="jurusan1">
                                 <option>Pilihan Jurusan 1</option>
-                                <option value="Sulawesi Selatan">Sulawei Selatan</option>
+                                <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                                <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                                <option value="Teknik Jaringan Akses Telekomuniasi">Teknik Jaringan Akses Telekomuniasi</option>
+                                <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
+                                <option value="Parawisata">Parawisata</option>
+                                <option value="Perhotelan">Perhotelan</option>
                             </select>
                         </div>
                         <div class="col-lg-6">
                             <select class="form-control" name="jurusan2" id="jurusan2">
                                 <option>Pilihan Jurusan 2</option>
-                                <option value="Sulawesi Selatan">Sulawei Selatan</option>
+                                <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                                <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                                <option value="Teknik Jaringan Akses Telekomuniasi">Teknik Jaringan Akses Telekomuniasi</option>
+                                <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
+                                <option value="Parawisata">Parawisata</option>
+                                <option value="Perhotelan">Perhotelan</option>
                             </select>
                         </div>
                     </div>
